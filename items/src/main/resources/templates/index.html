@@ -1,0 +1,14 @@
+{{> /include/header }}
+<h1>It work's!</h1>
+<div class="ui icon message">
+	<i class="icon circular red info"></i>
+	<p class="content">
+	Ca marche !
+	</p>
+</div>
+<ul class="ui list">
+	{{# items }}
+	<li class="item">{{nom}} - <span class="ui rating" data-rating="{{evaluation}}"></span></li>
+	{{/ items }} 
+</ul>
+{{> /include/footer }}
