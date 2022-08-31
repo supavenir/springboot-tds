@@ -1,14 +1,22 @@
 {{> /include/header }}
-<h1>It work's!</h1>
+<h1>Eléments</h1>
+{{# msg}}
 <div class="ui icon message">
 	<i class="icon circular red info"></i>
 	<p class="content">
-	Ca marche !
+	{{.}}
 	</p>
 </div>
+{{/ msg}}
+<a class="ui orange button" href="/add">Ajouter un élément...</a>
 <ul class="ui list">
 	{{# items }}
-	<li class="item">{{nom}} - <span class="ui rating" data-rating="{{evaluation}}"></span></li>
+	<li class="item">{{nom}} - <div class="ui rating" data-max-rating="10" data-rating="{{evaluation}}"></div></li>
 	{{/ items }} 
 </ul>
+
+{{# form}}
+{{> /addForm }}
+{{/form}}
+
 {{> /include/footer }}
